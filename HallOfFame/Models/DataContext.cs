@@ -7,7 +7,7 @@ namespace HallOfFame.Models
         public DbSet<Person> Persons { get; set; }
         public DbSet<Skill> Skills { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite("Data Source=Database.db");
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

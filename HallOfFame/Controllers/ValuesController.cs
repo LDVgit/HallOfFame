@@ -26,7 +26,12 @@ namespace HallOfFame.Controllers
         [HttpGet("person/{id}")]
         public ActionResult<Person> GetPerson(long id)
         {
-            return Ok(_db.Persons.Include(p => p.Skills).FirstOrDefault(p => p.Id == id));
+            var person = _db.Persons.Include(p => p.Skills).FirstOrDefault(p => p.Id == id);
+
+            if (person == null)
+                return NotFound();
+
+            return Ok(person);
         }
 
         [HttpPost("person")]
@@ -34,12 +39,15 @@ namespace HallOfFame.Controllers
         {
             _db.Persons.Add(person);
             _db.SaveChanges();
-            return NoContent();
+            return Ok();
         }
 
         [HttpPut("person/{id}")]
         public ActionResult UpdatePerson(long id, Person person)
         {
+            if (!_db.Persons.Any(p => p.Id == id))
+                return NotFound();
+
             if (id != person.Id)
                 BadRequest();
 
@@ -60,16 +68,19 @@ namespace HallOfFame.Controllers
             _db.Entry(person).State = EntityState.Modified;
             _db.SaveChanges();
 
-            return NoContent();
+            return Ok();
         }
 
         [HttpDelete("person/{id}")]
         public ActionResult RemovePerson(long id)
         {
             var person = _db.Persons.Find(id);
+            if (person == null)
+                return NotFound();
+
             _db.Persons.Remove(person);
-            _db.SaveChangesAsync();
-            return NoContent();
+            _db.SaveChanges();
+            return Ok();
         }
     }
 }

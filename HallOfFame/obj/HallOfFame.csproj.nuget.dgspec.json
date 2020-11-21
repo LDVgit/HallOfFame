@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\HallOfFame\\HallOfFame\\HallOfFame.csproj": {}
+    "D:\\asuproject\\HallOfFame\\HallOfFame\\HallOfFame.csproj": {}
   },
   "projects": {
-    "C:\\projects\\HallOfFame\\HallOfFame\\HallOfFame.csproj": {
+    "D:\\asuproject\\HallOfFame\\HallOfFame\\HallOfFame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\HallOfFame\\HallOfFame\\HallOfFame.csproj",
+        "projectUniqueName": "D:\\asuproject\\HallOfFame\\HallOfFame\\HallOfFame.csproj",
         "projectName": "HallOfFame",
-        "projectPath": "C:\\projects\\HallOfFame\\HallOfFame\\HallOfFame.csproj",
-        "packagesPath": "C:\\Users\\fiolet069\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\HallOfFame\\HallOfFame\\obj\\",
+        "projectPath": "D:\\asuproject\\HallOfFame\\HallOfFame\\HallOfFame.csproj",
+        "packagesPath": "C:\\Users\\ldv\\.nuget\\packages\\",
+        "outputPath": "D:\\asuproject\\HallOfFame\\HallOfFame\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fiolet069\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ldv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
